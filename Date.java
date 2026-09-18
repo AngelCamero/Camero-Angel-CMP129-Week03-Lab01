@@ -3,6 +3,19 @@ public class Date {
     private int month;
     private int year;
 
+    public Date(int month, int day, int year) {
+        setMonth(month);
+        setDay(day);
+        setYear(year);
+    }
+    private String getMonthName() {
+        String [] months = {
+            "January", "February", "March", "April", "May", "June", "July", 
+            "August", "September", "October", "November", "December"
+        };
+        return months[this.month - 1];
+        
+    }
     public int getDay(){
         return this.day;
     }
@@ -25,7 +38,14 @@ public class Date {
         this.year = year;
     }
 
-    public String DisplayDate(){
-        return "date entered: " + this.month + "/" + this.day + "/" + this.year;
+    public void DisplayDate(){
+        System.out.println(this.month + "/" + this.day + "/" + this.year);
     }
+    public void Format2(){
+        System.out.println(getMonthName() + " " + getDay() + ", " + getYear());
+    }
+    public void lastFormat() {
+        System.out.println(getDay() + " " + getMonthName() + " " + getYear());
+    }
+
 }

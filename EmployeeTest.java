@@ -25,5 +25,6 @@ public class EmployeeTest {
         System.out.println();
 
         employee.displayInfo();
+        scanner.close();
     }
 }
